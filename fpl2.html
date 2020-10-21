@@ -18,42 +18,21 @@ var sv = getParam("sv");
 <script type="text/javascript">jwplayer.key = "eNFaXCjyURVoCCGiHp7HTQ3hDhE/AfL0g8VE1fRbL84=";</script>
 <div class="videocontent">
 <div id="plays" style="margin-top: 25%; text-align: center; font-family: arial,sans-serif; font-size: 18px; color: #ffff; text-shadow: 0 1px 1px #000;"موقع  كوره جي لايف</div>
-<script type="text/javascript">
-playerInstance = jwplayer("plays");
-playerInstance.setup({width: "100%",aspectratio: "16:9",
-   sources:[{file:sv,label:"360p","default": "true",type:"video/mp4"},{file:"https://cdn.jwplayer.com/videos/q1fx20VZ-kNspJqnJ.mp4",label:"480p",type:"video/mp4"},{file:"https://cdn.jwplayer.com/videos/q1fx20VZ-kNspJqnJ.mp4",label:"720p",type:"video/mp4"}],stretching:"",
-     advertising: {
-        client: "vast",
-            schedule:{
-                adbreak: {
-                offset: "pre",
-                tag: "https://github.com/InteractiveAdvertisingBureau/VAST_Samples/raw/master/VAST%204.0%20Samples/Video_Clicks_and_click_tracking-Inline-test.xml"
-                }
-            },
-                skiptext: "ข้าม",
-                skipmessage: "ข้ามวีดีโอนี้ใน  XX",
-                admessage: "วีดีโอสิ้นสุดใน XX ."
-     }
-});
-		</script>
-  </div>
-<style>/*<![CDATA[*/
-body{background:#000;font-family:sans-serif;margin:0}
-*{text-decoration:none}
-.videos-channel{position:absolute;z-index:999;left:10px;top:10px;right:10px;height:0}
-.videos-channel .button{background:#931800;cursor:pointer;font-size:14px;float:left;display:block;border-radius:5px;height:25px;text-align:center;line-height:22px;text-shadow:0 1px 1px #000;color:#fff;padding:0 10px;font-family:sans-serif;font-weight:bold;position:relative;z-index:99}
-.videos-channel .refresh{float:right}
-#share_channel{position:absolute;top:-10px;z-index:9;left:-10px;border-radius:0;background:rgba(0,0,0,0.69);right:-10px;bottom:0;height:100vh;text-align:center}
-.share-channel{position:absolute;top:50%;right:0;left:0;margin-top:-50px}
-.share-channel textarea{margin-top:20px;border-radius:5px;border:0;max-width:350px;width:100%;direction:ltr;height:45px;overflow:hidden;font-size:11px;}
-.site-link{text-shadow:2px 2px 2px #000;z-index:999;bottom:18%;position:fixed;width:100%;height:0%;text-align:center;color:#fff;font-size:2vw;display:none1}
-#player{position:absolute;height:100%!important;z-index:99;right:0;left:0;}
-.jw-slider-time.jw-background-color.jw-reset.jw-slider-horizontal.jw-reset,.jwplayer.jw-flag-rightclick-open .jw-rightclick,.jw-icon.jw-icon-inline.jw-button-color.jw-reset.jw-icon-rewind,.jw-icon.jw-icon-inline.jw-text.jw-reset.jw-text-elapsed,.jw-icon.jw-icon-inline.jw-button-color.jw-reset.jw-icon-cc.jw-settings-submenu-button.jw-off .jw-svg-icon,.jw-icon.jw-icon-inline.jw-button-color.jw-reset.jw-icon-cc.jw-settings-submenu-button.jw-off .jw-reset-text.jw-tooltip.jw-tooltip-captions{display:none}
-.jw-text-live::before{height:6px;width:6px;background-color:#f00}
-.jw-text-live.jw-dvr-live{box-shadow:initial}
-.jw-text-live.jw-dvr-live::before{background-color:currentColor;}
-iframe.cf{position:absolute;height:100%}
-/*]]>*/</style>
+<script src='https://jwpsrv.com/library/SakQCEfSEeOHhRIxOQfUww.js'></script>
+<div id='player'></div>
+<script>jwplayer("player").setup({file:"https://akamai2-me.cdn.booyah.live/hls/113137/28043022.m3u8",
+controls:"true",
+width:"100%",
+height:"100%",
+stretching:"uniform",
+autostart:"true",
+primary:"flash",
+logo: {file: 'https://4.bp.blogspot.com/-34SPx0qzBko/XV2tEcLbiVI/AAAAAAAAID8/H9j9Vrfo1jEVSq8xyWQgPvowGHt94SYvwCK4BGAYYCw/s1600/logo1.png',
+skin:"glow",	 	
+androidhls:"true"}}); 
+</script>
+<style>.jw-slider-time.jw-background-color.jw-reset.jw-slider-horizontal.jw-reset,.jw-icon.jw-icon-inline.jw-button-color.jw-reset.jw-icon-rewind,.jwplayer.jw-flag-rightclick-open .jw-rightclick,.jw-text-elapsed,.jw-time-tip::after, .jw-controlbar .jw-tooltip::after, .jw-settings-menu .jw-tooltip::after{display:none}.jw-text-live.jw-dvr-live{box-shadow:initial}.jw-text-live::before{height:6px;width:6px;background-color:#f00}.jw-text-live.jw-dvr-live::before{background-color:#757575}</style><br />
+
 <style>
 .jw-rightclick ul{display:none;}
 .jw-background-color {
