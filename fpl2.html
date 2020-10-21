@@ -12,7 +12,6 @@ var sv = getParam("sv");
 </script>
 	</head>
 	<body>
-	    
 <!-- JW8 !-->
 <script src="https://content.jwplatform.com/libraries/lqsWlr4Z.js">
 <script type="text/javascript">jwplayer.key = "Rj7tDuYSCqZdNKNAqsjWoMDBdHhp1THggDFOUhr0Zj8=";</script>
@@ -22,7 +21,7 @@ var sv = getParam("sv");
 <script type="text/javascript">
 playerInstance = jwplayer("plays");
 playerInstance.setup({width: "100%",aspectratio: "16:9",
-    sources:[{file: sv,label:"360p","default": "true",type:"video/mp4"},{file:sv,label:"480p",type:"video/mp4"},{file:sv,label:"720p",type:"video/mp4"}],stretching:"",
+   sources:[{file:sv,label:"360p","default": "true",type:"video/mp4"},{file:"https://cdn.jwplayer.com/videos/q1fx20VZ-kNspJqnJ.mp4",label:"480p",type:"video/mp4"},{file:"https://cdn.jwplayer.com/videos/q1fx20VZ-kNspJqnJ.mp4",label:"720p",type:"video/mp4"}],stretching:"",
      advertising: {
         client: "vast",
             schedule:{
@@ -71,7 +70,4 @@ background: none !important;
 <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="159d45a919f3559dc6c0afe3-|49" defer=""></script>	
 	</body>
 </html>
-
-
-
 
