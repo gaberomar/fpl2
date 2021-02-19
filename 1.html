@@ -1,0 +1,63 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta charset="UTF-8">
+
+     <script> 
+function getParam ( sname )
+{
+ var params = location.search.substr(location.search.indexOf("?")+1);
+ var sval =  params.replace("sv=", "");
+ return sval;
+}
+var sv = getParam("sv");
+</script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script type="text/javascript" src="http://ghiban.live/public/plugins/jwplayer/jwplayer.js"></script>
+        <script type="4cf0b30833f846ba943343df-text/javascript">jwplayer.key="ITWMv7t88JGzI0xPwW8I0+LveiXX9SWbfdmt0ArUSyc=";</script>
+
+<style> 
+          .player { 
+            width: 100%; 
+            height: 100%; 
+          } 
+        </style> 
+</head>
+<body>
+    <div id="wrapper">
+        <div id="player"></div>
+    </div>
+
+    <script>
+      jwplayer.key = "ITWMv7t88JGzI0xPwW8I0+LveiXX9SWbfdmt0ArUSyc=";
+        if (Hls.isSupported() && p2pml.hlsjs.Engine.isSupported()) {
+            var engine = new p2pml.hlsjs.Engine();
+            var player = jwplayer("player");
+            player.setup({
+                file: sv,
+               playbackRateControls: true,
+            });
+            var provider = require("@hola.org/jwplayer-hlsjs");
+            provider.attach();
+            p2pml.hlsjs.initJwPlayer(player, {
+                liveSyncDurationCount: 7, // To have at least 7 segments in queue
+                loader: engine.createLoaderClass()
+            });
+        } else {
+           var player = jwplayer("player");
+          player.setup({
+            autostart: true,
+                sources: [{
+                  file: "<?php echo($_GET['url']);?>",
+                   type: "mp4"
+                }],
+          });
+        }
+    </script>
+
+</body>
+</html>
